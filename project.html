@@ -1,0 +1,190 @@
+<!doctype html>
+<html><head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="project.css"/>
+	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+       integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous"/>
+	<link rel="stylesheet" href="bootstrap.css"/>
+	
+	
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script src="jquery-resizable.js"></script>
+	
+	<script>
+		$(function(){ $("#panel-left").resizable({
+			handleSelector: ".splitter",
+			resizeHeight: false
+		});})
+		
+		$(function(){ $(".panel-top").resizable({
+			handleSelector: ".splitter-horizontal",
+			resizeWidth: false,
+			alsoResize:".panel-bottom"
+		});})
+	</script>
+	<script>
+		function expand(){
+			var a =document.getElementById("i").className;
+			if(a==="fa fa-arrows-alt"){
+				document.getElementById("panel-left").style.display = "none";
+				document.getElementById("splitter").style.display="none";
+				document.getElementById("i").className="fa fa-arrow-right";
+			}
+			else{
+				document.getElementById("panel-left").style.display = "block";
+				document.getElementById("splitter").style.display="block";
+				document.getElementById("i").className="fa fa-arrows-alt";
+			}
+		}
+	</script>
+</head>
+
+<body>
+	
+<div class="panel-container">
+	<div class="panel-left" id="panel-left" >
+		<div class="Question">
+			<div class="head">
+				<div class="author">
+					<i class="fa fa-address-book" aria-hidden="true"></i>
+					<a href="#">AuthorName</a>
+				</div>
+				<div class="level">Easy</div>
+				<div class="point">
+				<i class="fa fa-heart" aria-hidden="true"></i><span>100 Points</span>
+				</div>
+
+				<div class="right">
+				<div class="charLimit"><span>Character Limit : </span>
+					<span class="number">3000</span>
+				</div>
+				<div class="option">
+				<select>
+					<option value="vn">Tiếng Việt</option>
+					<option value="en" selected>English</option>
+				</select>
+				</div>
+				</div>
+			</div>
+
+			<div class="container">
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores consectetur ab, facilis quos quo? Officia doloribus ullam cum deleniti laborum voluptatem reprehenderit reiciendis labore nostrum porro. Repudiandae perferendis expedita sapiente, odio dolores veniam quasi delectus consectetur repellendus quisquam numquam deleniti obcaecati eius omnis, ad, accusantium mollitia nesciunt quod reprehenderit dolorem incidunt ex, laudantium esse quas. Est ut aut nisi, magnam facere praesentium quis eligendi laboriosam debitis dolorum illum ducimus molestiae, odit ipsa assumenda sunt maiores sint accusamus harum impedit non sequi delectus quod dignissimos. Omnis assumenda cupiditate totam sunt soluta quasi ducimus voluptas magnam. Officiis, expedita sunt ducimus aperiam voluptatum, assumenda, qui, maiores accusantium error repellendus animi consequuntur! Eos maiores suscipit, dolorum molestias temporibus dolore tenetur, animi id, odit nostrum maxime necessitatibus blanditiis eaque dolor ratione magnam odio vero minus doloribus corporis aliquam natus pariatur aliquid neque! Eos iusto eum molestias quae in. Eius voluptates dolorum, perferendis odit velit quo recusandae necessitatibus reprehenderit omnis et officia id suscipit pariatur nemo deleniti, optio. Maiores quis consectetur maxime illo amet dolore magni esse nisi quam vero veniam exercitationem qui delectus fugiat ipsa at officiis ea neque quasi, quisquam, itaque. Consequatur quam inventore neque deleniti atque expedita minima sed veritatis ratione laborum cupiditate voluptate, alias, voluptatibus ad quasi architecto cumque doloribus ducimus molestias impedit minus itaque sapiente provident velit delectus? Corporis molestiae, reiciendis accusantium voluptate illum dignissimos dolorum illo in ipsam laboriosam officiis aperiam architecto non hic ad numquam ab blanditiis minima animi expedita velit alias? Quos vero pariatur, nisi magnam libero molestiae voluptas similique maxime distinctio odio voluptatibus fuga eum, voluptates soluta, quis consequuntur nemo id reprehenderit inventore unde veritatis eligendi ex rem illo. Blanditiis dolore itaque, deleniti suscipit impedit dolorem ad dolorum quis in facere voluptate perspiciatis reprehenderit officia illum? Ullam, atque ipsum assumenda debitis perspiciatis unde veniam, consectetur, eaque fugit similique sed sint accusamus non nam dolores quos asperiores consequatur ipsam, aspernatur eveniet qui? Quasi eum, quis incidunt laborum sit enim eaque asperiores! Harum, eius eveniet est inventore temporibus nesciunt minima, porro culpa illum quae reprehenderit consectetur recusandae qui necessitatibus ducimus. Nam maiores beatae autem hic molestias a voluptatum aliquid vel nesciunt laboriosam blanditiis commodi, quis debitis incidunt est labore libero cupiditate deserunt adipisci iusto qui architecto et dicta vitae. Ratione earum non, animi eum corporis, praesentium, laboriosam atque quod numquam dolorum quae. Iure ad eius excepturi sapiente inventore. Repellat accusantium id explicabo at deleniti. Nemo velit laudantium, consequatur perspiciatis.</div>
+
+		</div>
+	</div>
+	
+
+	<div id="splitter" class="splitter">
+		</div>
+
+
+	<div class="panel-right">
+		
+		
+		
+		<div class="panel-container-vertical">
+			<div class="head-code">
+							
+					<div class="expand"><button id="expand" onClick="expand()"><i id="i" class="fa fa-arrows-alt" aria-hidden="true"></i></button></div>
+
+					<div class="type">
+						<select>
+							<option>C++</option>
+						</select>
+					</div>
+						<script>
+							function reset(){
+								confirm("Are you sure you want to reset code?")
+							}
+						</script>
+					<div ><button onClick="reset()" id="reset"><i class="fa fa-refresh" aria-hidden="true"></i> Reset</button></div>
+				</div>
+ 			<div class="panel-top">
+				
+				<div class="code">
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis explicabo quas tempore, incidunt vitae iure labore rerum, fuga? Quo fugiat iusto magnam et doloremque vitae deleniti sequi molestiae, dolor molestias ad autem ut amet laboriosam nemo ea iste repellendus optio quasi dolores. Natus vel laudantium at veniam deserunt. Hic quod cum ipsam quae quidem, praesentium vitae eveniet officiis totam soluta quaerat, repellat. Fuga provident minima numquam, architecto, perferendis sint rerum. Illum enim quidem officia aperiam natus, nostrum porro, eum, dicta aut repellendus atque, praesentium eaque aspernatur quam! Id tenetur maiores fugit tempore inventore nostrum, eveniet molestiae, perspiciatis dicta aut, iure ab omnis. Debitis cupiditate veritatis illum repellat iure optio. Reprehenderit mollitia, expedita, similique veniam ipsa quas ipsam reiciendis quidem quod sit cumque tenetur! Rem saepe sapiente voluptatem similique, vero et velit, fugit magnam expedita dicta quia quasi deserunt, quos illum. Aspernatur sunt, cupiditate tenetur. Sequi, adipisci, rerum. Distinctio ullam iste quas nemo neque ea similique iure rem, enim, facilis nostrum porro. Totam accusamus quas eligendi, incidunt libero, ullam optio. Voluptatibus dignissimos possimus totam, molestiae nostrum consequatur illum quas asperiores vero id, rem sequi at tempora quisquam necessitatibus deleniti ipsa dicta accusantium facilis ipsum. Eveniet quas unde vel ea dolores, velit. Cumque dolorum excepturi voluptates perferendis, maxime ad unde libero accusamus illum inventore a est, minima, eius velit voluptas. Quasi minus vero laborum ratione nisi! Ex iusto quisquam neque! Libero distinctio, optio quas tenetur facilis quam molestiae! Omnis aut cumque soluta quae vero, numquam dicta officiis dignissimos dolor, nihil, quam. Laborum illo laboriosam culpa possimus ab incidunt eum iste nulla ipsa. Minima, non unde, quibusdam consectetur reiciendis iure odio ipsam ad modi repudiandae accusamus mollitia quae soluta ratione. Vel impedit odio aspernatur, ducimus provident. Saepe laudantium ducimus delectus quibusdam ea nulla molestiae nobis recusandae, eaque, veritatis in voluptatibus accusamus. Eos et aperiam hic fuga, accusantium nobis neque provident! Sunt non fuga, ex ut id at recusandae quae earum eligendi sapiente dolorum, error, asperiores totam, sed quia debitis placeat reprehenderit. Quia, impedit porro aperiam praesentium, cumque atque odio, suscipit minus deserunt quas esse nulla labore dolores, quis odit rem fuga eum ducimus voluptatem cum earum! Fuga culpa illum accusamus necessitatibus ipsa nesciunt magnam assumenda nihil non dignissimos tenetur hic deserunt eos quam obcaecati, aliquid dicta excepturi aliquam amet nostrum. Sequi quisquam quidem deleniti doloribus nulla mollitia dolore, voluptas inventore distinctio nihil, iusto qui totam cum optio ipsa veritatis ipsum nesciunt dicta repellat.
+				 </div>
+
+				 <!--code zone-->
+			</div>
+
+<!--
+			<script>
+				
+				function resize(){
+					if(s=="none"){document.getElementsByClassName("panel-bottom").style.display="block";
+						document.getElementsByClassName("splitter-horizontal").className="splitter-horizontal normal";
+						
+					}
+					else{
+						document.getElementsByClassName("panel-bottom").style.display="none";
+						document.getElementsByClassName("splitter-horizontal").className="splitter-horizontal hide";
+					}
+				}
+			</script>
+-->
+<!--			resize chuwa lamf duoc-->
+			
+			<div class="splitter-horizontal normal" id="split" >
+				<button class="btn-primary" onClick="resize()">TEST CASE</button>
+				<button class="btn-secondary" style="display: none;">CONSOLE</button>
+			</div>
+		
+			
+			<script>
+				function display1(){
+					document.getElementById("1").style.display="block";
+					document.getElementById("1").className="textzone";
+					document.getElementById("2").style.display="none";
+					document.getElementById("btn2").className="";
+					document.getElementById("btn1").className="selected";
+				}
+				function display2(){
+					document.getElementById("2").style.display="block";
+					document.getElementById("2").className="textzone";
+					document.getElementById("1").style.display="none";
+					document.getElementById("btn1").className="";
+					document.getElementById("btn2").className="selected";
+				}
+				
+			</script>
+		
+			
+			<div class="panel-bottom"  id="display">
+
+				<div class="testcase" >
+					<ul>
+					<li><button id="btn1" onClick="display1()" class="selected" >Test Case 1</button></li>
+					<li><button id="btn2" class="" onClick="display2()">Test Case 2</button></li>
+<!--
+					<li><button>Test Case 3</button></li>
+					<li><button>Test Case 4</button></li>
+-->
+					</ul>
+				</div>	
+				<div class="textzone" id="1">
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores deleniti, ratione, deserunt officiis, adipisci nisi alias praesentium minima, voluptatem delectus dolorum quaerat. Corporis quod beatae sequi, possimus quasi dolor iure est fugiat itaque. Esse cupiditate molestias, cumque enim, hic sint nihil eligendi ratione eos perferendis consequuntur maxime id aspernatur non corporis tenetur, dolor totam ut laboriosam optio facilis ad velit aliquam quo quos. Unde eaque assumenda dolores ab magni, consequuntur modi! Ea dolor voluptate fugit voluptas cupiditate modi! Quas ipsa unde aperiam reiciendis dolore corporis rerum minima asperiores, deserunt et animi necessitatibus quae optio nostrum esse labore doloribus, explicabo architecto distinctio. Neque voluptatum ut debitis officia. Explicabo atque accusantium reprehenderit quisquam quod officiis esse, sapiente saepe, dolore possimus placeat? Velit distinctio cum nihil ipsum explicabo, voluptatem aliquam, quisquam laudantium nam sunt reiciendis quam, ratione! Provident odit impedit mollitia nostrum illum, est ipsa assumenda, facilis, obcaecati voluptatibus sit, adipisci. Rem saepe, ut. At quaerat dolorem laudantium dolore deleniti, laboriosam accusamus possimus voluptates eos magnam aliquam, vel dolores suscipit voluptatum quae provident? Odit veritatis in amet numquam cum ipsam ducimus dicta et eum quam perferendis, provident consequatur nisi quis itaque cupiditate. Nesciunt cumque, soluta ipsum, deserunt quam in ex. Dolores neque, ut!
+				</div>
+				<div class="" id="2" style="display: none;">hihi <br>  hehehehehe</div>
+<!--
+				<div class="textzone" id="three"></div>
+				<div class="textzone" id="four"></div>
+-->
+							
+				
+			</div>
+			<div class="bottom">
+					<button>Submit</button>
+					<button>Run code</button>
+				</div>
+			
+		
+		</div>
+		
+		
+	</div>
+	
+	
+</div>
+</body>
+</html>

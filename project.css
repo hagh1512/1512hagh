@@ -1,0 +1,339 @@
+/* Scss Document */
+html,
+body {
+  font-size: 20px;
+  padding: 0px;
+  margin: 0px;
+/*  overflow: hidden;*/
+  box-sizing: border-box;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+
+/* horizontal panel*/
+.panel-container {
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+  xtouch-action: none;
+}
+
+.Question {
+  padding: 0px;
+  margin: 0px;
+  color: black;
+  width: 100%;
+  height: 100%;
+}
+.Question .head {
+  font-size: 14px;
+  display: inline-block;
+}
+.Question .head .author {
+  display: inline;
+}
+.Question .head .author a {
+  text-decoration: none;
+}
+.Question .head .author a:hover {
+  text-decoration: underline;
+}
+.Question .head .level {
+  display: inline;
+  margin-left: 20px;
+  border: 1px solid #037A10;
+  border-radius: 12px;
+  padding: 2px 4px;
+  background-color: #037A10;
+  color: white;
+}
+.Question .head .point {
+  display: inline;
+  margin-left: 20px;
+  color: #565656;
+}
+.Question .head .point i {
+  color: pink;
+}
+.Question .head .right {
+  clear: both;
+  position: inherit;
+  float: right;
+  right: 0px;
+}
+.Question .head .charLimit {
+  display: inline;
+  right: 20px;
+  color: #4E4E4E;
+  margin-left: 20px;
+}
+.Question .head .charLimit .number {
+  color: red;
+  font-weight: bold;
+}
+.Question .head .option {
+  display: inline;
+  float: right;
+  margin-left: 20px;
+}
+.Question .head .option select {
+  height: 30px;
+  line-height: 30px;
+  min-width: 120px;
+  color: black;
+  background-color: #FFFFFF;
+  margin-top: -50px;
+  padding: 6px 12px;
+  font-size: 13px;
+  border-radius: 7px;
+  border: 1px solid  #FFFFFF;
+  box-shadow: inset 0 1px 4px #000014;
+  outline: none;
+}
+
+.splitter {
+  flex: 0 0 auto;
+  width: 12px;
+  height: 100vh;
+  background: url("scroll.png") center center no-repeat #6F9B98;
+  min-height: 200px;
+  cursor: col-resize;
+}
+
+.panel-left {
+  width: 600px;
+  flex: 0 0 auto;
+  height: 100vh;
+  overflow: scroll;
+  overflow-x: hidden;
+  overflow-y: auto;
+  padding: 15px;
+  background-color: white;
+}
+
+.panel-right {
+/*  height: 100vh;*/
+  color: white;
+  flex: 1 1 auto;
+  min-width: 350px;
+}
+
+.panel-container-vertical {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.panel-top {
+  flex: 0 0 auto;
+  width: 100%;
+  height: 250px;
+  overflow: scroll;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background-color: #1e1f26;
+}
+
+.head-code {
+  top: 0px;
+  padding: 0px;
+  margin: 0px;
+  background-color: #232432;
+  border: 1px solid #232432;
+  height: 45px;
+  width: 100%;
+}
+.head-code button, .head-code select {
+  position: relative;
+  font-size: 15px;
+  color: white;
+  background-color: #3b3c54;
+  padding: 5px 9px;
+  margin: 5px;
+  border: 1px solid #3b3c54;
+  outline: none;
+  border-radius: 4px;
+  float: left;
+}
+.head-code button:hover {
+  background-color: #0020E0;
+  border: 1px solid #0020E0;
+}
+.head-code select {
+  background-color: black;
+  min-width: 150px;
+}
+.head-code #reset {
+  float: right;
+}
+
+.splitter-horizontal {
+  flex: 0 0 auto;
+  height: 18px;
+  background:url(https://raw.githubusercontent.com/RickStrahl/jquery-resizable/master/assets/hsizegrip.png) center center no-repeat #232432;
+  cursor: row-resize;
+  font-size: 14px;
+  line-height: 14px;
+	 
+}
+.splitter-horizontal button {
+  background-color: #232432;
+  outline: none;
+  border: none;
+}
+
+.panel-bottom {
+  height: 600px;
+  background-color: #1e1f26;
+  padding: 5px 5px;
+  position: relative;
+  flex: 1 1 auto;
+  overflow: scroll;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.testcase {
+  float: left;
+  padding: 0px;
+  font-size: 15px;
+  width: 100px;
+}
+.testcase ul {
+  list-style-type: none;
+  margin: 0px;
+  padding: 0px;
+}
+.testcase ul li {
+  margin: 0px 0px 2px 0px;
+}
+.testcase ul li button {
+  padding: 5px 0px;
+  color: white;
+  font-size: 20px;
+  background-color: #232432;
+  outline: none;
+  border: none;
+  font-weight: 400;
+  width: 100%;
+}
+.testcase ul li button:hover {
+  background-color: #3b3c54;
+}
+.testcase .selected{
+	background-color: #3b3c54;
+}
+.textzone {
+  width: auto;
+  flex: 1 1 auto;
+  overflow: scroll;
+  overflow-x: hidden;
+  overflow-y: auto;
+  padding: 15px;
+  background-color: #3b3c54;
+  height: 100%;
+}
+
+.bottom {
+  clear: both;
+  background-color: #232432;
+  height: 40px;
+  bottom: 0px;
+  width: 100%;
+}
+.bottom button {
+  float: right;
+  width: 80px;
+	height: 30px;
+  margin: 0 10px;
+  border: none;
+  color: white;
+  background-color: black;
+  border-radius: 7px;
+  font-size: 15px;
+	line-height: 15px;
+  outline: none;
+  padding: 5px;
+}
+
+.bottom button:first-child {
+  background-color: #7bc043;
+}
+.bottom button:last-child {
+  background-color: #2c31cf;
+}
+.bottom button:hover{
+	background-color: #008ABC;
+}
+
+@media screen and (max-width: 800px) {
+	body{
+		overflow: auto;
+	}
+	.panel-container{
+		display: block;
+		overflow: auto;
+		flex-direction: none;
+	}
+	.panel-left{
+		width: 100%;
+		height: 100%;
+		overflow: auto;
+	}
+	.splitter {
+    display: none;
+  	}
+	.panel-right{
+		width: 100%;
+		height: 100%;
+		overflow: auto;
+	}
+	.panel-container-vertical {
+		display: block;
+		overflow: auto;
+		flex-direction: none;
+		height: 100%;
+	}
+	.expand{
+		display: none;
+	}
+	.panel-top{
+		display: block;
+		overflow: auto;
+		width: 100%;
+		height: 100%;
+	}
+	.panel-bottom{
+		display: block;
+		overflow: auto;
+		width: 100%;
+		height: 100%;
+	}
+	.textzone{
+		margin-bottom: 20px;
+	}
+	.bottom{
+		padding: 5px;
+		height: 30px;
+		line-height: 30px;
+		position: fixed;
+	}
+  
+}
